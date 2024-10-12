@@ -13,9 +13,9 @@ public interface OrderLogisticsDtoMapper {
     String SPACE_SEPARATOR = " ";
 
     @Mappings({
-            @Mapping(target = "operator.operatorInfo.vdaId", source = "dto.operationLog.userId"),
+//            @Mapping(target = "operator.operatorInfo.vdaId", source = "dto.operationLog.userId"),
             @Mapping(target = "operator.operatorInfo.fullName", expression = "java(getFullName(orderLogisticsFlowDto.getEmployeeDto()))"),
-            @Mapping(target = "operator.operatorInfo.phone", source = "dto.employeeDto.login"),
+//            @Mapping(target = "operator.operatorInfo.phone", source = "dto.employeeDto.login"),
     })
     OrderLogisticsDto map(OrderLogisticsFlowDto dto);
 
