@@ -14,8 +14,7 @@ public interface OrderLogisticsDtoMapper {
 
     @Mappings({
             @Mapping(target = "operator.operatorInfo.vdaId", source = "dto.operationLog.userId"),
-//            @Mapping(target = "operator.operatorInfo.fullName", source = "dto.fullName"),
-            @Mapping(target = "operator.operatorInfo.fullName", expression = "java(getFullName(dto.getEmployeeDto()))"),
+            @Mapping(target = "operator.operatorInfo.fullName", expression = "java(getFullName(orderLogisticsFlowDto.getEmployeeDto()))"),
             @Mapping(target = "operator.operatorInfo.phone", source = "dto.employeeDto.login"),
     })
     OrderLogisticsDto map(OrderLogisticsFlowDto dto);
